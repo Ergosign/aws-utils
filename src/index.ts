@@ -1,3 +1,3 @@
-import * as cors from './cors/option/ValidateCorsHost';
+import {ValidateCorsHost} from './cors/option/ValidateCorsHost';
 
-module.exports = cors;
+export {ValidateCorsHost};
