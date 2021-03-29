@@ -1,3 +1,3 @@
 import * as cors from './cors/option/ValidateCorsHost';
 
-export const Cors = cors;
+module.exports = cors;
