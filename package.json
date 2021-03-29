@@ -1,6 +1,6 @@
 {
   "name": "ergosign-aws-utils",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Collection of Utility scripts useful when building Lambda Functions on Amazon Web Services",
   "main": "dist/index.js",
   "typings": "dist/index",
