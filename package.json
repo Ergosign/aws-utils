@@ -1,0 +1,41 @@
+{
+  "name": "ergosign-aws-utils",
+  "version": "0.1.0",
+  "description": "Collection of Utility scripts useful when building Lambda Functions on Amazon Web Services",
+  "main": "dist/index.js",
+  "typings": "dist/index",
+  "prepublishOnly": "npm run compile",
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "build": "tsc --build --clean && tsc  -p .",
+    "watch": "tsc -w",
+    "test": "jest",
+    "clean": "rm -rf src/**/*.js && rm -rf ./src/**/*.d.ts",
+    "release-it": "release-it --dry-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ergosign/aws-utils.git"
+  },
+  "author": "Al Briggs @ Ergosign",
+  "license": "MIT",
+  "private": false,
+  "bugs": {
+    "url": "https://github.com/Ergosign/aws-utils/issues"
+  },
+  "homepage": "https://github.com/Ergosign/aws-utils#readme",
+  "devDependencies": {
+    "@types/jest": "26.0.20",
+    "@types/node": "14.14.33",
+    "jest": "26.6.3",
+    "release-it": "14.5.0",
+    "ts-jest": "26.5.3",
+    "ts-node": "9.1.1",
+    "typescript": "3.9.7"
+  },
+  "files": [
+    "dist/index.js",
+    "dist/index.d.ts",
+    "dist/cors"
+  ]
+}

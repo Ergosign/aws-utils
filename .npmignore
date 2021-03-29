@@ -1,0 +1,8 @@
+.DS_Store
+.git
+src
+jest.config.js
+tsconfig.json
+.gitignore
+node_modules
+__tests__
