@@ -1,3 +1,2 @@
-import {ValidateCorsHost} from './cors/option/ValidateCorsHost';
-
-export {ValidateCorsHost};
+export { AwsMetricManager } from "./metrics/AwsMetricManager";
+export { ValidateCorsHost } from "./cors/option/ValidateCorsHost";
