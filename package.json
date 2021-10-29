@@ -11,7 +11,11 @@
     "watch": "tsc -w",
     "test": "jest",
     "clean": "rm -rf src/**/*.js && rm -rf ./src/**/*.d.ts",
-    "release-it": "release-it"
+    "release-it:beta-initial": "release-it patch --preRelease=beta --npm.tag=next --verbose",
+    "release-it:beta-ongoing": "release-it --preRelease=beta --npm.tag=next --verbose",
+    "release-it:patch": "release-it patch -n --verbose",
+    "release-it:minor": "release-it minor -n --verbose",
+    "release-it:major": "release-it major -n --verbose"
   },
   "repository": {
     "type": "git",
@@ -32,6 +36,9 @@
     "ts-jest": "26.5.3",
     "ts-node": "9.1.1",
     "typescript": "3.9.7"
+  },
+  "dependencies": {
+    "aws-embedded-metrics": "2.0.4"
   },
   "files": [
     "dist/index.js",

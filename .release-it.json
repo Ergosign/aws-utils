@@ -1,0 +1,20 @@
+{
+    "hooks": {
+      "before:init": ["npm run test"],
+      "after:bump": ["npm run build", "npm run test -- -u"],
+      "after:git:release": "echo After git push, before github release",
+      "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
+    },
+    "git": {
+      "commit": true,
+      "tag": true,
+      "requireUpstream": true,
+      "requireCleanWorkingDir": true,
+      "push": true
+    },
+    "npm": {
+      "publish": true,
+      "skipChecks": true
+    }
+  }
+  
