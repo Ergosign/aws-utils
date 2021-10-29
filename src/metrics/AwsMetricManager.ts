@@ -6,8 +6,8 @@ export class AwsMetricManager {
     metricName: string,
     unit: Unit,
     value: number,
-    dimensions: Record<string, string>,
-    properties: { key: string; value: unknown }[]
+    dimensions: Record<string, string> = {},
+    properties: { key: string; value: unknown }[] = []
   ) => {
     const metrics = createMetricsLogger();
     metrics.putDimensions(dimensions);

@@ -41,8 +41,6 @@
     "aws-embedded-metrics": "2.0.4"
   },
   "files": [
-    "dist/index.js",
-    "dist/index.d.ts",
-    "dist/cors"
+    "dist"
   ]
 }
