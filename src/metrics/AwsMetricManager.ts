@@ -1,7 +1,7 @@
 import { createMetricsLogger, Unit } from "aws-embedded-metrics";
 
 export class AwsMetricManager {
-  static recordMetric = async (
+  public static recordMetric = async (
     namespace: string,
     metricName: string,
     unit: Unit,
@@ -11,11 +11,11 @@ export class AwsMetricManager {
   ) => {
     const metrics = createMetricsLogger();
     metrics.putDimensions(dimensions);
-    metrics.setNamespace(namespace)
+    metrics.setNamespace(namespace);
     metrics.putMetric(metricName, value, unit);
-    properties.forEach(property => {
-        metrics.setProperty(property.key, property.value);
-    })
+    properties.forEach((property) => {
+      metrics.setProperty(property.key, property.value);
+    });
     await metrics.flush();
   };
 }
