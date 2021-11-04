@@ -10,7 +10,7 @@ export class AwsMetricManager {
     properties: { key: string; value: unknown }[] = []
   ) => {
     const metrics = createMetricsLogger();
-    metrics.putDimensions(dimensions);
+    metrics.setDimensions(dimensions);
     metrics.setNamespace(namespace);
     metrics.putMetric(metricName, value, unit);
     properties.forEach((property) => {
