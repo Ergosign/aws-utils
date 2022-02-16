@@ -29,6 +29,14 @@ describe("Test if domain valid", () => {
     ).toBeTruthy();
   });
 
+  test("validate empty Origin returns false", () => {
+    process.env.WEBSITE_ROOT_DOMAIN = TEST_ROOT_DOMAIN;
+    expect(
+      ValidateCorsHost.validateHostName({},
+        undefined!
+      )
+    ).toBeFalsy();
+  });
   test("Test DEV allows any localhost port ", () => {
     // Setup ENV variables for DEV
     process.env.WEBSITE_ROOT_DOMAIN = TEST_ROOT_DOMAIN;
@@ -251,5 +259,14 @@ describe("Test allowed origin for domains", () => {
         `https://not-allowed-host-approved.de`
       )
     ).toMatch(`https://www.${TEST_ROOT_DOMAIN}`);
+  });
+
+  test("empty Origin doesn't throw error", () => {
+    process.env.WEBSITE_ROOT_DOMAIN = TEST_ROOT_DOMAIN;
+    expect(
+      ValidateCorsHost.generateAllowOriginForOrigin({},
+        undefined!
+      )
+    );
   });
 });

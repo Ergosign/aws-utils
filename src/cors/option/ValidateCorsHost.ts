@@ -9,6 +9,9 @@ export class ValidateCorsHost {
   
 
   static validateHostName = (allowedHosts:AllowedHosts, originHostname: string): boolean => {
+    if (!originHostname || originHostname.length==0){
+      return false;
+    }
     const websiteRootDomain = process.env.WEBSITE_ROOT_DOMAIN ?? 'no-root-domain';
     const corsAllowLocalhost = process.env.CORS_ALLOW_LOCALHOST === 'true' ?? false;
     const runningStage = process.env.WEBSITE_ENVIRONMENT_STAGE ?? 'no-stage-set';
