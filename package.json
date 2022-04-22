@@ -1,5 +1,5 @@
 {
-  "name": "ergosign-aws-utils",
+  "name": "@ergosign/aws-utils",
   "version": "0.2.6",
   "description": "Collection of Utility scripts useful when building Lambda Functions on Amazon Web Services",
   "main": "dist/index.js",
@@ -22,7 +22,7 @@
     "type": "git",
     "url": "git+https://github.com/Ergosign/aws-utils.git"
   },
-  "author": "Al Briggs @ Ergosign",
+  "author": "Ergosign",
   "license": "MIT",
   "private": false,
   "bugs": {
